@@ -1,0 +1,42 @@
+---
+// Importation de la fonction getCollection depuis le module 'astro:content'
+import { getCollection } from 'astro:content';
+
+// Importation des composants et mises en page nécessaires
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import PortfolioPreview from '../components/PortfolioPreview.astro';
+import Hero from '../components/Hero.astro';
+import Grid from '../components/Grid.astro';
+
+// Récupération des projets à partir de la collection 'work' et tri par date de publication décroissante
+const projects = (await getCollection('work')).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+// Utilisation du composant BaseLayout avec des propriétés spécifiques
+---
+<BaseLayout
+	title="Mes projets | Nice Lembengouni"
+	description="Découvrez les projets les plus récents de Nice"
+>
+	<div class="stack gap-20">
+		<main class="wrapper stack gap-8">
+			<Hero
+				title="Mes projets"
+				tagline="Consultez mes projets les plus récents ci-dessous pour avoir une idée de mes compétences."
+				align="start"
+			/>
+			<Grid variant="offset">
+				{
+					projects.map((project) => (
+						<li>
+							<PortfolioPreview project={project} />
+						</li>
+					))
+				}
+			</Grid>
+		</main>
+		<ContactCTA />
+	</div>
+</BaseLayout>

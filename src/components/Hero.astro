@@ -1,0 +1,56 @@
+---
+// Interface pour définir les propriétés attendues
+interface Props {
+	title: string; // Le titre du composant Hero
+	tagline?: string; // La sous-ligne facultative du composant Hero
+	align?: 'start' | 'center'; // L'alignement du texte ('start' pour à gauche, 'center' pour au centre)
+}
+
+// Extraction des propriétés de Astro.props
+const { align = 'center', tagline, title } = Astro.props;
+---
+
+<div class:list={['hero stack gap-4', align]}>
+	<div class="stack gap-2">
+		<h1 class="title">{title}</h1> {/* Affiche le titre */}
+		{tagline && <p class="tagline">{tagline}</p>} {/* Affiche la sous-ligne si elle est spécifiée */}
+	</div>
+	<slot />
+</div>
+
+<style>
+	.hero {
+		font-size: var(--text-lg);
+		text-align: center;
+	}
+
+	.title,
+	.tagline {
+		max-width: 37ch;
+		margin-inline: auto;
+	}
+
+	.title {
+		font-size: var(--text-3xl);
+		color: var(--gray-0);
+	}
+
+	@media (min-width: 50em) {
+		.hero {
+			font-size: var(--text-xl);
+		}
+
+		.start {
+			text-align: start;
+		}
+
+		.start .title,
+		.start .tagline {
+			margin-inline: unset;
+		}
+
+		.title {
+			font-size: var(--text-5xl);
+		}
+	}
+</style>

@@ -1,0 +1,64 @@
+---
+// Définition des propriétés du composant
+interface Props {
+	// Lien de destination du bouton
+	href: string;
+}
+
+// Extraction de la propriété "href" des propriétés Astro
+const { href } = Astro.props;
+---
+
+{/* Lien stylisé sous forme de bouton */}
+<a href={href}><slot /></a>
+
+<style>
+	/* Style du lien bouton */
+	a {
+		position: relative;
+		display: flex;
+		place-content: center;
+		text-align: center;
+		padding: 0.56em 2em;
+		gap: 0.8em;
+		color: var(--accent-text-over);
+		text-decoration: none;
+		line-height: 1.1;
+		border-radius: 999rem;
+		overflow: hidden;
+		background: var(--gradient-accent-orange);
+		box-shadow: var(--shadow-md);
+		white-space: nowrap;
+	}
+
+	/* Media query pour ajuster la taille du texte sur les écrans plus grands */
+	@media (min-width: 20em) {
+		a {
+			font-size: var(--text-lg);
+		}
+	}
+
+	/* Overlay pour les effets de survol */
+	a::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		transition: background-color var(--theme-transition);
+		mix-blend-mode: overlay;
+	}
+
+	/* Effets de survol et de focus */
+	a:focus::after,
+	a:hover::after {
+		background-color: hsla(var(--gray-999-basis), 0.3);
+	}
+
+	/* Media query pour ajuster la taille et le rembourrage sur les écrans plus grands */
+	@media (min-width: 50em) {
+		a {
+			padding: 1.125rem 2.5rem;
+			font-size: var(--text-xl);
+		}
+	}
+</style>

@@ -1,0 +1,125 @@
+---
+// Importation de la mise en page de base (BaseLayout) depuis le fichier '../layouts/BaseLayout.astro'
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Importation des composants ContactCTA et Hero depuis leurs fichiers respectifs
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+
+// Déclaration du composant de page
+---
+<BaseLayout title="À propos | Nice Lembengouni" description="A propos de Nice Lembengouni">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			{/* Utilisation du composant Hero pour la section d'en-tête */}
+			<Hero
+				title="À propos"
+				tagline="Merci de consacrer quelques instants à découvrir davantage sur moi et mes compétences."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/niceportrait.jpg"
+					alt="niceportrait"
+				/>
+			</Hero>
+
+			{/* Section décrivant le parcours de Nice Lembengouni */}
+			<section>
+				<h2 class="section-title">Parcourt</h2>
+				<div class="content">
+					<p>
+						J'ai suivi ma première formation en informatique en Afrique du Sud, où j'ai pu acquérir les bases de ce domaine fascinant et en constante évolution, se développant à une vitesse vertigineuse. Mon initiation en tant que technicien informatique a débuté lors de mes stages dans ce pays.Actuellement, je maîtrise aisément la réalisation de divers projets scolaires impliquant des techniques telles que Docker, les API, l'utilisation de Figma, la création de bases de données avec Postgresql, Mariadb ou Redis, ainsi que d'autres compétences que je préfère vos demontrer.
+					</p>
+					<p>
+						Ce qui me distingue le plus, c'est ma capacité innée à m'adapter rapidement à de nouveaux environnements et à assimiler de nouvelles connaissances et technologies. D'une nature ouverte, je donne une grande importance à la communication et au partage de connaissances.
+					</p>
+					
+				</div>
+			</section>
+			{/* Section décrivant la formation de Nice Lembengouni */}
+			<section>
+				<h2 class="section-title">Formation</h2>
+				<div class="content">
+					<p>BAC+2 Développeur web, Licence 1 en informatique .</p>
+				</div>
+			</section>
+			{/* Section décrivant les compétences de Nice Lembengouni */}
+			<section>
+				<h2 class="section-title">Compétences</h2>
+				<div class="content">
+					<p>Curieux, Créatif, Autonome, Organisé, Travail d'équipe</p>
+				</div>
+			</section>
+			{/* Section décrivant les langages de programmation maîtrisés par Nice Lembengouni */}
+			<section>
+				<h2 class="section-title">Langages de programmation</h2>
+				<div class="content">
+					<p>Javascript,TypeScript,Python,HTML,SSH,PHP</p>
+				</div>
+			</section>
+		</main>
+
+		{/* Ajout du composant ContactCTA en bas de la page */}
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>

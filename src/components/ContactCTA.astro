@@ -1,0 +1,54 @@
+---
+// Import des composants nécessaires
+import CallToAction from './CallToAction.astro';
+import Icon from './Icon.astro';
+---
+
+<aside>
+	{/* Titre de la section */}
+	<h2>Souhaitez-vous collaborer ?</h2>
+	{/* Utilisation du composant CallToAction pour créer un bouton avec une icône */}
+	<CallToAction href="mailto:lembengouninice02@domain.com">
+		Ecrivez-moi
+		{/* Utilisation de l'icône "paper-plane-tilt" avec une taille spécifiée */}
+		<Icon icon="paper-plane-tilt" size="1.2em" />
+	</CallToAction>
+</aside>
+
+<style>
+	/* Style de la section "aside" contenant le CallToAction */
+	aside {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 3rem;
+		border-top: 1px solid var(--gray-800);
+		border-bottom: 1px solid var(--gray-800);
+		padding: 5rem 1.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+	/* Style du titre "h2" dans la section */
+	h2 {
+		font-size: var(--text-xl);
+		text-align: center;
+		max-width: 15ch;
+	}
+
+	@media (min-width: 50em) {
+		/* Styles pour les écrans de taille plus grande (50em et plus) */
+		aside {
+			padding: 7.5rem;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		/* Ajustements du style du titre pour les écrans plus grands */
+		h2 {
+			font-size: var(--text-3xl);
+			text-align: left;
+		}
+	}
+</style>
