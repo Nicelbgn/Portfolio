@@ -4,7 +4,7 @@ publishDate: 2024-25-01 00:00:00
 img: /assets/portfolio.png
 img_alt: Portfolio de Nice Lembengouni.
 description: |
-  c'est une expression visuelle de ton savoir-faire en développement web et une manière puissante de mettre en valeur tes compétences auprès des employeurs ou clients potentiels..
+ C'est une représentation visuelle de ton expertise en développement web, constituant une manière puissante de mettre en lumière tes compétences auprès d'employeurs ou de clients potentiels.
 tags:
   - Astro
   - BackEnd
