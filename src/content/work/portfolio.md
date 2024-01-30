@@ -7,7 +7,7 @@ description: |
  C'est une représentation visuelle de ton expertise en développement web, constituant une manière puissante de mettre en lumière tes compétences auprès d'employeurs ou de clients potentiels.
 tags:
   - Astro
-  - BackEnd
+  - Figma
   - FrontEnd
 ---
  
