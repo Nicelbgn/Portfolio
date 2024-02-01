@@ -15,7 +15,7 @@ Pendant ce projet, j'ai mis en pratique les concepts fondamentaux de TypeScript 
 
 # Objectifs
 
-Avant d'apporter des modifications, il est impératif de comprendre les bases du jeu. Il s'agit d'un RPG au tour par tour où vous incarnez un personnage défiante le château d'Hyrule, composé de 10 étages. À chaque étage, vous affrontez un ennemi, et au dernier étage, vous devez défier le Boss.
+Avant d'apporter des modifications, il est impératif de comprendre les bases du jeu. Il s'agit d'un RPG au tour par tour où vous incarnez un personnage défiant le château d'Hyrule, composé de 10 étages. À chaque étage, vous affrontez un ennemi, et au dernier étage, vous devez défier le Boss.
 
 Actuellement, votre personnage est Link, doté de 60 points de vie maximum (PV) et 15 points de force (FOR).
 
@@ -35,4 +35,4 @@ Lorsque les PV du personnage tombent à 0, il meurt et le jeu s'arrête.
 
 Si le boss est vaincu, le jeu se termine avec un message de félicitations.
 
-Je propose vous de faire un tour vers mon github afin d'avoir une idée detaillé de mon proje.
+Je vous propose de faire un tour vers mon github afin d'avoir une idée detaillé de mon proje.
