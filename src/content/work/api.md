@@ -27,4 +27,4 @@ Utiliser uvicorn pour lancer son API
 Utiliser des JWT avec PyJWT
 Utiliser curl pour faire des requêtes de test
 
-Je propose vous de faire un tour vers mon github afin d'avoir une idée detaillé de mon projet.
+Je vous proposede faire un tour vers mon github afin d'avoir une idée detaillé de mon projet.
