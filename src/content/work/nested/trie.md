@@ -15,7 +15,7 @@ tags:
 # Objectif  
 
 Durant ce projet notre objectif était de réalisé:
-* Tri à bulles (Bubble Sort) : Il compare et échange les éléments adjacents s'ils sont dans le mauvais ordre, itérant à travers la liste jusqu'à ce qu'aucun échange ne soit nécessaire.
+* Tri par bulles (Bubble Sort) : Il compare et échange les éléments adjacents s'ils sont dans le mauvais ordre, itérant à travers la liste jusqu'à ce qu'aucun échange ne soit nécessaire.
 
 * Tri par sélection (Selection Sort) : Il sélectionne successivement l'élément le plus petit et l'échange avec l'élément à la position actuelle.
 
@@ -23,4 +23,4 @@ Durant ce projet notre objectif était de réalisé:
 
 * Tri rapide (Quick Sort) : Il utilise une approche de partitionnement récursif pour diviser la liste en sous-listes plus petites, puis trie ces sous-listes.
 
-Je propose vous de faire un tour vers mon github afin d'avoir une idée detaillé de mon projet.
+Je vous propose de faire un tour vers mon github afin d'avoir une idée detaillé de mon projet.
